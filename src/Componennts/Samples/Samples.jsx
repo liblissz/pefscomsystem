@@ -11,7 +11,7 @@ const Samples = () => {
   useEffect(() => {
     const incrementCount = async () => {
       try {
-        const res = await axios.post('https://pefscom-backend.onrender.com/api/pageview');
+        const res = await axios.post('https://pefscombackendprivate.onrender.com/api/pageview');
         
       } catch (error) {
         console.error('Failed to increment page views', error);
@@ -29,7 +29,7 @@ useEffect(()=>{
   try {
     setloading(true)
      
-    const allpictures = await axios.get("https://pefscom-backend.onrender.com/admin/picture/post")
+    const allpictures = await axios.get("https://pefscombackendprivate.onrender.com/admin/picture/post")
     setimagepost(allpictures.data)
    
   } catch (error) {
@@ -42,7 +42,7 @@ useEffect(()=>{
   try {
     setloading(true)
      
-    const allvideos = await axios.get("https://pefscom-backend.onrender.com/admin/video/post")
+    const allvideos = await axios.get("https://pefscombackendprivate.onrender.com/admin/video/post")
     setvideopost(allvideos.data)
   
   } catch (error) {

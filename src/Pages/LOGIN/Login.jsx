@@ -59,7 +59,7 @@ const AuthForms = () => {
       const imgURL = await uploadFile();
       if (!imgURL) return;
 
-      const response = await axios.post('https://pefscom-backend.onrender.com/normal/users', {
+      const response = await axios.post('https://pefscombackendprivate.onrender.com/normal/users', {
         name,
         email,
         about,
@@ -95,7 +95,7 @@ const AuthForms = () => {
     setloading(true);
 
     try {
-      const response = await axios.post("https://pefscom-backend.onrender.com/api/login/users", {
+      const response = await axios.post("https://pefscombackendprivate.onrender.com/api/login/users", {
         email: emailcheck,
         password: passwordcheck,
       });

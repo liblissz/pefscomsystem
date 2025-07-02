@@ -18,7 +18,7 @@ const Order = () => {
 
     try {
       setloading(true);
-      const response = await axios.post("https://pefscom-backend.onrender.com/api/post/orders", {
+      const response = await axios.post("https://pefscombackendprivate.onrender.com/api/post/orders", {
         name: user_name,
         email: email,
         phonenumber: phonenumber,

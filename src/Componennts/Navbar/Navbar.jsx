@@ -18,7 +18,7 @@ const Navbar = () => {
       try {
         if (!token) return;
 
-        const res = await axios.get('https://pefscom-backend.onrender.com/api/normaluser/profile', {
+        const res = await axios.get('https://pefscombackendprivate.onrender.com/api/normaluser/profile', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

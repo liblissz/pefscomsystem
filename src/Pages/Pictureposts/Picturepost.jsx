@@ -13,7 +13,7 @@ const Picturepost = () => {
 
         const fetchvideo = async () => {
             try {
-        const picturein = await axios.get(`https://pefscom-backend.onrender.com/admin/picture/post/${id}`)
+        const picturein = await axios.get(`https://pefscombackendprivate.onrender.com/admin/picture/post/${id}`)
         setpicture(picturein.data)
             } catch (error) {
        toast.error(error)
