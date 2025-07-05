@@ -93,12 +93,14 @@ const Picturepost = () => {
                 </svg>
               ))}
               <span className="strawberry">245 Reviews</span>
+
             </div>
           </div>
+          <button>share</button>
 
           {/* 💬 SHARE BUTTONS */}
           <div style={{ marginTop: '20px', display: 'flex', gap: '10px', alignItems: 'center' }}>
-            <FacebookShareButton url={shareUrl} quote={shareText}>
+            <FacebookShareButton url={shareUrl} quote={shareText}>      
               <FacebookIcon size={40} round />
             </FacebookShareButton>
             <WhatsappShareButton url={shareUrl} title={shareText}>
