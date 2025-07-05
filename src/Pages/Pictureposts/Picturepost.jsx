@@ -34,7 +34,7 @@ const Picturepost = () => {
   // ✅ Use your frontend page URL hosted on Vercel
   const shareUrl = `https://pefscomsystem.vercel.app/picturepost/${id}`
   const shareText = picture.title || "Check this post from PEFSCOM!"
-  
+  const content = picture.content
 
   return (
     <div className='owefui'>
@@ -54,10 +54,10 @@ const Picturepost = () => {
           {/* ✅ Share Buttons */}
           <div className="pear" style={{ marginBottom: "20px", display: "flex", gap: "15px", alignItems: "center" }}>
             <span style={{ fontWeight: 'bold', color: '#222' }}>Share:</span>
-            <WhatsappShareButton  url={shareUrl} title={shareText}  ImageUrl={picture.ImageUrl}>
+            <WhatsappShareButton  url={shareUrl} title={shareText}  content={content}>
               <WhatsappIcon size={40} round />
             </WhatsappShareButton>
-            <FacebookShareButton url={shareUrl} quote={shareText}>
+            <FacebookShareButton url={shareUrl} quote={shareText} content={content}>
               <FacebookIcon size={40} round />
             </FacebookShareButton>
           </div>
