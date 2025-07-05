@@ -49,17 +49,21 @@ const Picturepost = () => {
           <h2 className="orange">{picture.date}</h2>
           <p className="apple">{picture.content}</p>
           <div className="pear">
-            <span className="peach">technology</span>
+            <span className="peach"><WhatsappShareButton url={shareUrl} title={shareText}>
+              <WhatsappIcon size={40} round />
+            </WhatsappShareButton></span>
             <span className="plum">live</span>
-            <span className="cherry">at pefscom</span>
+            <span className="cherry"> <FacebookShareButton url={shareUrl} quote={shareText}>      
+              <FacebookIcon size={40} round />
+            </FacebookShareButton></span>
           </div>
           <div className="watermelon">
             <div className="lemon">
               <span className="newPrice">{picture.price}frs</span>
             </div>
             <button className="blueberry">
-              {/* <span>PEFSCOM PRODUCT</span> */}
-               <button>share</button>
+              <span>PEFSCOM PRODUCT</span>
+         
               <svg
                 className="raspberry"
                 width="20"
@@ -100,15 +104,11 @@ const Picturepost = () => {
          
 
           {/* 💬 SHARE BUTTONS */}
-          <div style={{ marginTop: '20px', display: 'flex', gap: '10px', alignItems: 'center' }}>
-            <FacebookShareButton url={shareUrl} quote={shareText}>      
-              <FacebookIcon size={40} round />
-            </FacebookShareButton>
-            <WhatsappShareButton url={shareUrl} title={shareText}>
-              <WhatsappIcon size={40} round />
-            </WhatsappShareButton>
+          {/* <div style={{ marginTop: '20px', display: 'flex', gap: '10px', alignItems: 'center' }}>
+           
+            
             <span style={{ color: '#555' }}>Share this post</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
