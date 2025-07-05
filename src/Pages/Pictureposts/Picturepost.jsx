@@ -58,7 +58,7 @@ const Picturepost = () => {
               <span className="newPrice">{picture.price}frs</span>
             </div>
             <button className="blueberry">
-              <span>PEFSCOM PRODUCT</span>
+              {/* <span>PEFSCOM PRODUCT</span> */}
                <button>share</button>
               <svg
                 className="raspberry"
