@@ -31,7 +31,8 @@ const Picturepost = () => {
     fetchpicture()
   }, [id])
 
-  const shareUrl = `https://pefscombackendprivate.onrender.com/share/picture/${id}`
+  // ✅ Use your frontend page URL hosted on Vercel
+  const shareUrl = `https://pefscom.vercel.app/picture/${id}`
   const shareText = picture.title || "Check this post from PEFSCOM!"
 
   return (
@@ -48,22 +49,24 @@ const Picturepost = () => {
           <div className="grape">{picture.title}</div>
           <h2 className="orange">{picture.date}</h2>
           <p className="apple">{picture.content}</p>
-          <div className="pear">
-            <span className="peach"><WhatsappShareButton url={shareUrl} title={shareText}>
+
+          {/* ✅ Share Buttons */}
+          <div className="pear" style={{ marginBottom: "20px", display: "flex", gap: "15px", alignItems: "center" }}>
+            <span style={{ fontWeight: 'bold', color: '#222' }}>Share:</span>
+            <WhatsappShareButton url={shareUrl} title={shareText}>
               <WhatsappIcon size={40} round />
-            </WhatsappShareButton></span>
-            <span className="plum">live</span>
-            <span className="cherry"> <FacebookShareButton url={shareUrl} quote={shareText}>      
+            </WhatsappShareButton>
+            <FacebookShareButton url={shareUrl} quote={shareText}>
               <FacebookIcon size={40} round />
-            </FacebookShareButton></span>
+            </FacebookShareButton>
           </div>
+
           <div className="watermelon">
             <div className="lemon">
               <span className="newPrice">{picture.price}frs</span>
             </div>
             <button className="blueberry">
               <span>PEFSCOM PRODUCT</span>
-         
               <svg
                 className="raspberry"
                 width="20"
@@ -98,17 +101,8 @@ const Picturepost = () => {
                 </svg>
               ))}
               <span className="strawberry">245 Reviews</span>
-
             </div>
           </div>
-         
-
-          {/* 💬 SHARE BUTTONS */}
-          {/* <div style={{ marginTop: '20px', display: 'flex', gap: '10px', alignItems: 'center' }}>
-           
-            
-            <span style={{ color: '#555' }}>Share this post</span>
-          </div> */}
         </div>
       </div>
     </div>
@@ -116,6 +110,7 @@ const Picturepost = () => {
 }
 
 export default Picturepost
+
 
 
 
