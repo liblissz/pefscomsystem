@@ -3,10 +3,11 @@ import './Footer.css'
 import axios from 'axios'
 import taost from 'react-hot-toast'
 const Footer = () => {
-
+  const [showlogout, setshowlogout] = useState(false)
   const handlelogout = ()=>{
     localStorage.removeItem("user-token")
     window.location.replace("/")
+    setshowlogout(true)
   }
 
   const [subscribe, setsubscribe] = useState("")
@@ -26,6 +27,8 @@ const Footer = () => {
       setloading(false)
     }
   }
+
+
   return (
     <footer className="footer">
       <div className="container">
@@ -64,7 +67,7 @@ const Footer = () => {
               <li><a href="#">Documentation</a></li>
               <li><a href="#">Tutorials</a></li>
               <li><a href="#">Webinars</a></li>
-              <li><a href="#"> <button onClick={handlelogout} className="btn-primary">logout</button></a></li>
+            {showlogout &&  <li><a href="#"> <button onClick={handlelogout} className="btn-primary">logout</button></a></li>}
             </ul>
           </div>
 
