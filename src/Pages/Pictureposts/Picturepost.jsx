@@ -59,6 +59,7 @@ const Picturepost = () => {
             </div>
             <button className="blueberry">
               <span>PEFSCOM PRODUCT</span>
+               <button>share</button>
               <svg
                 className="raspberry"
                 width="20"
@@ -96,7 +97,7 @@ const Picturepost = () => {
 
             </div>
           </div>
-          <button>share</button>
+         
 
           {/* 💬 SHARE BUTTONS */}
           <div style={{ marginTop: '20px', display: 'flex', gap: '10px', alignItems: 'center' }}>
