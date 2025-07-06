@@ -57,7 +57,7 @@ const VideoHero = () => {
           <p>{seevideo.content}</p>
         </div>
            <div
-          className="pear rambutan"
+          className="pear"
           style={{
             display: "flex",
             gap: "15px",

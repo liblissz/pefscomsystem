@@ -5,6 +5,7 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   overflow: hidden;
+  height: 700px;
   background: #000;
   position: relative;
 }
