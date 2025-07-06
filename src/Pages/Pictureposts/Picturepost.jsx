@@ -31,11 +31,7 @@ const Picturepost = () => {
     fetchpicture()
   }, [id])
 
-const shareUrl = picture._id
-  ? `https://pefscomsystem.vercel.app/share/picture/${picture._id}`
-  : '';
-
-
+const shareUrl = `https://pefscomsystem.vercel.app/share/picture/${picture._id}`
   const shareText = picture.title || "Check this post from PEFSCOM!"
   const content = picture.content
 
@@ -56,7 +52,7 @@ const shareUrl = picture._id
           <h2 className="orange">{picture.date}</h2>
           <p className="apple">{picture.content}</p>
 
-        {shareUrl && (
+    
   <div className="pear" style={{ marginBottom: "20px", display: "flex", gap: "15px", alignItems: "center" }}>
     <span style={{ fontWeight: 'bold', color: '#222' }}>Share:</span>
 
@@ -68,7 +64,7 @@ const shareUrl = picture._id
       <FacebookIcon size={40} round />
     </FacebookShareButton>
   </div>
-)}
+
 
 
           <div className="watermelon">
