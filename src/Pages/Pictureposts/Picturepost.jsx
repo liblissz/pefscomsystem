@@ -32,7 +32,7 @@ const Picturepost = () => {
   }, [id])
 
 const shareUrl = picture._id
-  ? `https://pefscom-backend.onrender.com/share/picture/${picture._id}`
+  ? `https://pefscomsystem.vercel.app/share/picture/${picture._id}`
   : '';
 
 
