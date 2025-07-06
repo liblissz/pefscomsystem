@@ -31,7 +31,7 @@ const Picturepost = () => {
     fetchpicture()
   }, [id])
 
-const shareUrl = `https://pefscomsystem.vercel.app/share/picture/${picture._id}`
+const shareUrl = `https://pefscomsystem.vercel.app/picturepost/${picture._id}`
   const shareText = picture.title || "Check this post from PEFSCOM!"
   const content = picture.content
 
