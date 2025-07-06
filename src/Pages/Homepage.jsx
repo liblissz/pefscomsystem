@@ -5,6 +5,7 @@ import UseCases from '../Componennts/Usecases/Usecases'
 import Samples from '../Componennts/Samples/Samples'
 import Pricing from '../Componennts/Prising/Prising'
 import CTA from '../Componennts/CTA/CTA'
+import Team from '../Componennts/Team/Team'
 
 const Homepage = () => {
   return (
@@ -13,6 +14,7 @@ const Homepage = () => {
             <Features/>
           <UseCases/>
           <Samples/>
+          <Team/>
           <Pricing/>
           <CTA/>
     </div>
