@@ -1,10 +1,10 @@
 import React from 'react';
-import Hero from '../Components/Hero/Hero';
-import Features from '../Components/Feature/Feature';
-import UseCases from '../Components/Usecases/Usecases';
-import Samples from '../Components/Samples/Samples';
-import Pricing from '../Components/Pricing/Pricing';
-import CTA from '../Components/CTA/CTA';
+import Hero from '../Componennts/Hero/Hero';
+import Features from '../Componennts/Feature/Feature';
+import UseCases from '../Componennts/Usecases/Usecases';
+import Samples from '../Componennts/Samples/Samples';
+import Pricing from '../Componennts/Pricing/Pricing';
+import CTA from '../Componennts/CTA/CTA';
 import Team from '../Pages/Team/Team';
 
 const Homepage = () => {
