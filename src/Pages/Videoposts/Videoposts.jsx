@@ -8,7 +8,8 @@ import {
   WhatsappShareButton,
   FacebookIcon,
   WhatsappIcon,
-} from 'react-share'
+} from 'react-share';
+
 const VideoHero = () => {
   const { id } = useParams();
   const [seevideo, setVideo] = useState(null);
@@ -31,9 +32,11 @@ const VideoHero = () => {
 
   if (loading) return <p>Loading video...</p>;
   if (!seevideo) return <p>Video not found.</p>;
-  const shareUrl = `https://pefscomsystem.vercel.app/picturepost/${id}`
-  const shareText = picture.title || "Check this post from PEFSCOM!"
-  const content = picture.content
+
+  const shareUrl = `https://pefscomsystem.vercel.app/picturepost/${id}`;
+  const shareText = seevideo.title || "Check this post from PEFSCOM!";
+  const content = seevideo.content;
+
   return (
     <div className="kiwifruit">
       <div className="lychee">
@@ -57,17 +60,24 @@ const VideoHero = () => {
           <h1>{seevideo.date}</h1>
           <p>{seevideo.price}</p>
         </div>
-             <div className="pear" style={{ marginBottom: "20px", display: "flex", gap: "15px", alignItems: "center" }}>
-            <span style={{ fontWeight: 'bold', color: '#222' }}>Share:</span>
-           <WhatsappShareButton url={shareUrl} title={`${shareText} - ${content}`}>
-  <WhatsappIcon size={40} round />
-</WhatsappShareButton>
+        <div
+          className="pear"
+          style={{
+            marginBottom: "20px",
+            display: "flex",
+            gap: "15px",
+            alignItems: "center",
+          }}
+        >
+          <span style={{ fontWeight: 'bold', color: '#222' }}>Share:</span>
+          <WhatsappShareButton url={shareUrl} title={`${shareText} - ${content}`}>
+            <WhatsappIcon size={40} round />
+          </WhatsappShareButton>
 
-<FacebookShareButton url={shareUrl} quote={`${shareText} - ${content}`}>
-  <FacebookIcon size={40} round />
-</FacebookShareButton>
-
-          </div>
+          <FacebookShareButton url={shareUrl} quote={`${shareText} - ${content}`}>
+            <FacebookIcon size={40} round />
+          </FacebookShareButton>
+        </div>
       </div>
     </div>
   );
