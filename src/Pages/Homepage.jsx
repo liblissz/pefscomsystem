@@ -11,6 +11,7 @@ const Homepage = () => {
   return (
     <div>
       <Hero/>
+      {/*  */}
             <Features/>
           <UseCases/>
           <Samples/>
