@@ -32,7 +32,7 @@ const Picturepost = () => {
   }, [id])
 
   // ✅ Use your frontend page URL hosted on Vercel
-const shareUrl = `https://pefscom-backend.onrender.com/share/picture/${id}`;
+const shareUrl = `https://pefscom-backend.onrender.com/share/picture/${picture._id}`;
 
   const shareText = picture.title || "Check this post from PEFSCOM!"
   const content = picture.content
