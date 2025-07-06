@@ -13,7 +13,7 @@ const VideoHero = () => {
     const fetchVideo = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`https://pefscombackendprivate.onrender.com/admin/video/post/${id}`);
+        const response = await axios.get(`https://pefscom-backend.onrender.com/admin/video/post/${id}`);
         setVideo(response.data);
       } catch (error) {
         toast.error('Failed to load video');
