@@ -40,8 +40,10 @@ const shareUrl = picture._id
   const content = picture.content
 
   return (
+    <div className='body1'>
     <div className='owefui'>
       {loading && <ClipLoader />}
+      
       <div className="banana">
         <div className="pineapple">pefscom</div>
         <div className="kiwi">
@@ -114,6 +116,7 @@ const shareUrl = picture._id
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }
