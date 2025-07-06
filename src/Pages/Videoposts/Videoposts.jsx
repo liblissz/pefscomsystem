@@ -56,14 +56,9 @@ const VideoHero = () => {
           <h1>{seevideo.title}</h1>
           <p>{seevideo.content}</p>
         </div>
-        <div className="santol">
-          <h1>{seevideo.date}</h1>
-          <p>{seevideo.price}</p>
-        </div>
-        <div
-          className="pear"
+           <div
+          className="pear rambutan"
           style={{
-            marginBottom: "20px",
             display: "flex",
             gap: "15px",
             alignItems: "center",
@@ -78,6 +73,11 @@ const VideoHero = () => {
             <FacebookIcon size={40} round />
           </FacebookShareButton>
         </div>
+        <div className="santol">
+          <h1>{seevideo.date}</h1>
+          <p>{seevideo.price}</p>
+        </div>
+     
       </div>
     </div>
   );
